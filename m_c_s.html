@@ -3,60 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mechanical Calibration Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Blog Title</title>
+    <link href="styles.css" rel="stylesheet">
     <style>
-        /* Add some styles for better presentation, adjust as needed */
-        .image-container {
-            position: relative;
-            display: inline-block;
-            padding-top: 20px;
-            margin: 50% 0 0 50%;
-            top: 70%;
-  left: 50%;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/m_c_s.webp') center/cover no-repeat fixed;
+            background-color: rgba(244, 244, 244, 0.8); /* Background color with opacity */
         }
-    
-        .overlay-text {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff; /* Text color */
+
+        header {
+            background-color: #32b2e5;
+            color: #fff;
+            padding: 20px;
             text-align: center;
         }
-    
-        .overlay-text h2,
-        .overlay-text p {
-            margin: 0;
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color for the content area with opacity */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-    
-        .image-container img {
-            display: block;
-            width: 100%; /* Make the image fill the container */
-            height: auto;
+
+        h1 {
+            color: #ffffff;
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+        }
+
+        p {
+            color: black;
+        }
+
+        .half {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .half > div {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-        
-<header>
-    <p class="contact-mail">contactcalibration@gmail.com</p>
-    <p class="mob">+91 ZZZZZ ZZZZZ</p>
-      <img src="images/logo.png" alt="Logo" height="50">
-      <h1 class="title-edit">INFO TECH CALIBRATION SERVICES</h1>
-      <p class="tagline">A Perfect Engineering Solution</p>
-</header>
 
-</head>
-<body>
+    <header>
+        <h2 style="color: white; margin: 0; font-style: italic; font-size:small;">WE ARE LEADER IN CALLIBRATION & TESTING SERVICES<h2>
+        <h1 style="color: white; margin-top: 0; font-family:Verdana, Geneva, Tahoma, sans-serif">MECHANICAL CALIBRATION SERVICES</h1>
+        <p style="color: white;"><b>Info Tech Calibration Services is an accredited body as per ISO/IEC 17025:2017 by the National Accreditation Board <br>for Testing & Calibration Laboratories (NABL) for both testing and calibration.</b></p>
+    </header>
 
-<div class="image-container">
-    <img src="images/m_c_s.webp" alt="Your Image">
-    <div class="overlay-text">
-        <h2>Your Heading</h2>
-        <p>Your overlay paragraph goes here.</p>
-    </div>
-</div>
+    <section>
+        <h2>Subheading</h2>
+
+        <div class="half">
+            <div>
+                <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Our goods and services have assisted businesses in improving their production processes 
+                    to meet their high quality standards. Our agency section maintains a database of reputable
+                     manufacturers from whom we source the wide variety of testing equipment from around India.
+                      All testing equipment is serviced, repaired, maintained, and calibrated to the necessary 
+                      standards by the servicing and calibration section. With the help of a group of professionals,
+                       this division makes every effort to guarantee that no testing equipment in any laboratory experiences any downtime.    
+                </p>
+                <img style="width: 150px;" src="images/mcs_01.jpg">
+                <img style="width: 150px;" src="images/mcs_02.jpg">
+            </div>
+
+            <div>
+                <label for="questions">Select a Question:</label>
+                <select id="questions">
+                    <option value="q1">DIMENSION</option>
+                    <option value="q2">PRESSURE & VACUUM</option>
+                    <option value="q3">MASS</option>
+                    <option value="q4">FORCE</option>
+                    <option value="q5">VOLUME</option>
+                    <option value="q6">ACOUSTIC, ACCELERATION & SPEED</option>
+                    <!-- Add more questions as needed -->
+                </select>
+
+                <div id="answers">
+                    <!-- Answers will be displayed here based on the selected question -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer-section">
+            <div>
+                <h3>About Us</h3>
+                <p>Some information about us goes here.</p>
+            </div>
+
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Service 2</a></li>
+                    <li><a href="#">Service 3</a></li>
+                    <li><a href="#">Service 4</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>123 Main Street<br>City, Country<br>Email: example@example.com<br>Phone: +123456789</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Add JavaScript logic to handle dropdown selection and display answers here
+        document.getElementById('questions').addEventListener('change', function () {
+            var selectedQuestion = this.value;
+            var answersContainer = document.getElementById('answers');
+            
+            // Clear previous answers
+            answersContainer.innerHTML = '';
+
+            // Add logic to display answers based on the selected question
+            switch (selectedQuestion) {
+                case 'q1':
+                    answersContainer.innerHTML = '<ul><li>External Micrometer</li> <li>Taper Gauge<li> Internal Micrometer<li>Flush Gauge<li>Depth Micrometer<li>Radius Gauge<li>Depth Gauge<li>“V” Block<li>Vernier Caliper<li>Ford Cup<li>Height Gauge<li>Pressing Master Gauge<li>Thickness Gauge<li>Thread Plug Gauge<li>Dial Indicator<li>Thread Ring Gauge<li>Dial Indicator<li>Squire Master<li>Bore Gauge<li>Steel Scale<li>Plain Plug Gauge<li>Measuring Tape<li>Plain Ring Gauge<li>Sprit Level<li>Slip Gauge Set<li>Electronic Probe<li>Slip Gauge Accessories<li>Special Zigs<li>Electronic Calibration Tester<li>Hole Master<li>Measuring Pin Set<li>Anvil Micrometer<li>Feeler Gauge<li>Dial Snap Gauge<li>Slot Gauge<li>Low Force Snap Gauge<li>Profile Projector<li>Bench centre<li>Caliper Checker<li>Angle Plate<li>Comparator Stand<li>Try Square<li>Surface Plate<li>Air Plug Gauge<li>Snap Gauge<li>Air Ring Gauge<li>Air Gauge Unit<li>Three Point Micrometer</ul>';
+                    break;
+                case 'q2':
+                    answersContainer.innerHTML = '<ul><li>Pressure Gauge<li>Vacuum Gauge<li>Pressure Transmitter & Transduce<li>Magnehelic Gauge<li>Manometer<li>Dead Weight Tester etc.</ul>';
+                    break;
+                case 'q3':
+                    answersContainer.innerHTML = '<p>Answer 3 goes here...</p>';
+                    break;
+                    case 'q4':
+                    answersContainer.innerHTML = '<ul><li>Rubber Hardness Tester<li>Brinell and Rockwell Hardness Tester<li>Universal testing Machine (UTM)<li>Tensile Testing Machine<li>Load Cell, Torque wrench<li>Torque Indicator etc.</ul>';
+                    break;
+                    case 'q5':
+                    answersContainer.innerHTML = '<ul><li>Burette<li>Pipette<li>Beakers<li>Measuring Cylinder<li>Flask<li>All Glass Ware (10 µl to 20 L)</ul>';
+                    break;
+                    case 'q6':
+                    answersContainer.innerHTML = '<ul><li>Sound meter (dB Meter), RPM Meter, Tachometer, Tachometer Calibrator</li></ul>';
+                    break;
+                // Add more cases for additional questions
+            }
+        });
+    </script>
 
 </body>
 </html>
