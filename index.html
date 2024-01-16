@@ -3,6 +3,89 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <style>
+          body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .column {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 30px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .right-column {
+      padding: 0 20px;
+    }
+
+    .read-more {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .hidden-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      margin-top: 20px;
+    }
+
+    .hidden-section.show {
+      max-height: 1000px; /* Adjust the max height based on your content */
+    }
+      .client-slide:hover {
+        transform: scale(1.5);
+      }
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .scroll-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .column {
+      text-align: center;
+      color: #333;
+    }
+
+    .count {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .count-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    </style>
+  
     </head>
     <body>
     
@@ -18,7 +101,7 @@
     <a href="#"><b>Home</b></a>
 
     <div class="dropdown">
-        <a href="#"><b>Services↯</b></a>
+        <a href="#"><b>Services &#8628;</b></a>
         <div class="dropdown-content">
             <a href="m_c_s.html">Mechanical Calibration Services</a>
             <a href="#">Thermal Calibration Facility</a>
@@ -38,7 +121,7 @@
             <div class="mySlides fade">
               <div class="numbertext">1 / 4</div>
               <img src="images/img-1.jpg" style="width:100%">
-              <div class="text">Leader in Testing & Calibration Services<br><i><button class="slide-button"><a href="#" style="color: blue;">Know More</a></button></i></div>
+              <div class="text">Leader in Calibration Services<br><i><button class="slide-button"><a href="#" style="color: blue;">Know More</a></button></i></div>
             </div>
           
             <div class="mySlides fade">
@@ -71,17 +154,130 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
           </div>
+
+          <div class="scroll-section" style="max-height: 200px; margin-top: 20px;">
+            <div class="column">
+              <img src="images/customers.png" alt="Customers" class="count-image" style="height: 80px; width: 80px;">
+              <div class="count" id="customersCount">0</div>
+              <p>Customers</p>
+            </div>
+        
+            <div class="column">
+              <img src="images/staff.png" alt="Staff" class="count-image" style="height: 80px; width: 80px;">
+              <div class="count" id="staffCount">0</div>
+              <p>Experienced Staff</p>
+            </div>
+        
+            <div class="column">
+              <img src="images/experience.png" alt="Experience" class="count-image" style="height: 80px; width: auto">
+              <div class="count" id="experienceCount">0</div>
+              <p>Years of Experience</p>
+            </div>
+        
+            <div class="column">
+              <img src="images/industry.png" alt="Industries" class="count-image" style="height: 80px; width: 80px;">
+              <div class="count" id="industriesCount">0</div>
+              <p>Big Industries</p>
+            </div>
+          </div>
+          <div class="main-section" style="margin-top: 20px;">
+            <div class="column">
+              <img src="images/home-about3.png" alt="Image" class="image">
+            </div>
+        
+            <div class="column right-column">
+              <h2>HIGHLY RECOGNIZED<br> by NABL ACCREDITED LABORATORY</h2>
+              <p>
+                <p>Info Tech Calibration began with maintenance, calibration of energy metres,
+                  relays, circuit breakers, panel wiring, yearly maintenance contracts, energy
+                  audits, and marketing of process control instruments. Global Calibration has gained
+                   experience and knowledge in the fields of electrotechnical, thermal, and mechanical 
+                   measurements over time. Both at the customer’s home and in a lab, Global Calibration offers calibration services.
+              <p class="read-more" onclick="toggleSection()">Read More</p>
+        
+              <div class="hidden-section" id="hiddenSection">
+                <h3>
+                  According to the kind and capacity of the equipment, every testing equipment
+                   is calibrated using various force measuring tools, specialised gauges, and 
+                   various test blocks, etc. According to the necessary standards advised by NABL, 
+                   any instrument that has been calibrated may be traced.</h3>
+                <p>
+                  Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical, Pressure, Flow, Mass & all Process Control Instruments.<br>
+        
+        It is an independent calibration Laboratory providing high quality reliable calibration services to industries.<br>
+        
+        It is equipped with qualified and trained personnel, high accuracy master equipment’s. All the calibrations are carried out under strictly controlled environmental conditions.<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center;">
+            <h1 style="margin-bottom: 10px;">Our Clients</h1>
+            <h2 style="margin-bottom: 20px;">Clients we've worked with</h2>
+        
+            <div id="client-slideshow" style="padding-left: 10px; padding-right: 10px; max-width: auto; text-align: center; margin: 0 auto; overflow: hidden;">
+              <div id="client-slides" style="display: flex; transition: transform 0.5s ease-in-out;">
+        
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/10KEI-Industries-Ltd.jpg" alt="Client 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+        
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/11Lumax-Industries-Ltd.jpg" alt="Client 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+        
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/12Musashi-Auto-Parts-India-Pvt-Ltd.jpg" alt="Client 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/13Panacea-Biotec-Pvt-Ltd.jpg" alt="Client 4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/14Relaxo-Footwears-Ltd.jpg" alt="Client 5" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/15Yachio-India-Manufacturing.jpg" alt="Client 5" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/16Ahlcon.jpg" alt="Client 6" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/4Balkrishna-Tyres-Group.jpg" alt="Client 7" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/5Diakin-Air-conditioning-India-P-Ltd.jpg" alt="Client 8" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/2Alchem-International-Ltd.jpg" alt="Client 9" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/3Asahi-India-Glass-Ltd.jpg" alt="Client 10" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/9India-Japan-Lighting-Ltd.jpg" alt="Client 11" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <div class="client-slide" style="max-width: 100px; max-height: 100px; margin: 0 5px; overflow: hidden; transition: transform 0.3s ease-in-out;">
+                  <img src="images/our_clients/8HAVELLS-INDIA-LTD.jpg" alt="Client 12" style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <!-- Add more client slides as needed -->
+        
+              </div>
+            </div>
+          </div>
+        
           <footer>
             <div class="footer-section">
                 <div>
                     <h3>About Us</h3>
-                    <p>Some information about us goes here.</p>
+                    <p>Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical, 
+                      Pressure, Flow, Mass & all Process Control Instruments.
+                      It is an independent calibration Laboratory providing high quality reliable calibration services to industries.</p>
                 </div>
     
                 <div>
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Mechanical Calibration Services</a></li>
                         <li><a href="#">Service 2</a></li>
                         <li><a href="#">Service 3</a></li>
                         <li><a href="#">Service 4</a></li>
@@ -126,6 +322,85 @@
         plusSlides(1);
     }, 3000);
           </script>
+            <script>
+              // JavaScript for the left-to-right slideshow
+              let clientSlides = document.getElementById('client-slides');
+              let currentPosition = 0;
+              let totalSlides = document.querySelectorAll('.client-slide').length;
           
+              // Function to change slide
+              function changeSlide(direction) {
+                currentPosition += direction;
+                if (currentPosition > totalSlides - 1) {
+                  currentPosition = 0;
+                }
+                clientSlides.style.transform = `translateX(${currentPosition * -110}px)`;
+              }
+          
+              // Automatic slideshow, change slide every 3 seconds
+              setInterval(function () {
+                changeSlide(7);
+              }, 3000);
+            </script>
+              <script>
+                // Function for fast count-up animation
+                function countUp(target, duration, countElement) {
+                  let start = 0;
+                  const increment = target / (duration / 16);
+            
+                  function updateCount() {
+                    start += increment;
+                    countElement.textContent = Math.floor(start);
+            
+                    if (start < target) {
+                      requestAnimationFrame(updateCount);
+                    } else {
+                      countElement.textContent = target + "+";
+                    }
+                  }
+            
+                  updateCount();
+                }
+            
+                // Count-up values and durations
+                const customersTarget = 3000;
+                const staffTarget = 250;
+                const experienceTarget = 25;
+                const industriesTarget = 20;
+            
+                const duration = 2000; // 2 seconds
+            
+                // Use Intersection Observer to trigger count-up when in view
+                const options = {
+                  root: null,
+                  rootMargin: '0px',
+                  threshold: 0.5,
+                };
+            
+                const observer = new IntersectionObserver((entries) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      countUp(customersTarget, duration, document.getElementById('customersCount'));
+                      countUp(staffTarget, duration, document.getElementById('staffCount'));
+                      countUp(experienceTarget, duration, document.getElementById('experienceCount'));
+                      countUp(industriesTarget, duration, document.getElementById('industriesCount'));
+                      observer.disconnect(); // Disconnect the observer after counting starts
+                    }
+                  });
+                }, options);
+            
+                // Start observing the scroll section
+                observer.observe(document.querySelector('.scroll-section'));
+              </script>
+                <script>
+                  function toggleSection() {
+                    const hiddenSection = document.getElementById('hiddenSection');
+                    hiddenSection.classList.toggle('show');
+                    const image = document.querySelector('.image');
+                    image.style.transform = (hiddenSection.classList.contains('show')) ? 'scaleY(0)' : 'scaleY(1)';
+                  }
+                </script>
+              
+            
     </body>
     </html>
