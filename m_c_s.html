@@ -57,19 +57,31 @@
             padding: 10px;
             margin-top: 10px;
         }
+        .back-to-home{
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+        }
+        .back-to-home:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h2 style="color: white; margin: 0; font-style: italic; font-size:small;">WE ARE LEADER IN CALLIBRATION & TESTING SERVICES<h2>
-        <h1 style="color: white; margin-top: 0; font-family:Verdana, Geneva, Tahoma, sans-serif">MECHANICAL CALIBRATION SERVICES</h1>
-        <p style="color: white;"><b>Info Tech Calibration Services is an accredited body as per ISO/IEC 17025:2017 by the National Accreditation Board <br>for Testing & Calibration Laboratories (NABL) for both testing and calibration.</b></p>
+        <a href="index.html"><button class="back-to-home"style="position: fixed; top: 0; left: 0; margin: 5px;">&#8592; Back to Home</button></a>
+        <h2 style="color: white; margin: 0; font-style: italic; font-size:small; padding-top: 20px;">WE ARE LEADER IN CALLIBRATION & TESTING SERVICES<h2>
+        <h1 style="color: white; margin-top: 0; font-family:Verdana, Geneva, Tahoma, sans-serif; margin-bottom: 2px;">MECHANICAL CALIBRATION SERVICES</h1>
+        <p style="color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 0; margin-top: 0;">Info Tech Calibration Services is an accredited body as per ISO/IEC 17025:2017 by the National Accreditation Board <br>for Testing & Calibration Laboratories (NABL) for both testing and calibration.</p>
     </header>
 
     <section>
-        <h2>Subheading</h2>
-
         <div class="half">
             <div>
                 <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
@@ -100,20 +112,34 @@
                     <!-- Answers will be displayed here based on the selected question -->
                 </div>
             </div>
+            
         </div>
-
+        
     </section>
+    <div style="background-color: #32b2e5e3; color: #ffffff; text-align: center; padding: 40px 0;">
+        <p style="margin: 10px 0; font-size: 18px;">Info Tech Calibration Services</p>
+        <h1 style="margin: 0; font-size: 36px;">On Site Calibration & Environmental Testing's.</h1>
+        <div style="margin-top: 20px;">
+          <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #2ecc71; color: #ffffff; text-decoration: none; font-size: 16px; margin-right: 10px;">Know More</a>
+          <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: #ffffff; text-decoration: none; font-size: 16px;">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <p></p>
+      </div>
     <footer>
         <div class="footer-section">
             <div>
                 <h3>About Us</h3>
-                <p>Some information about us goes here.</p>
+                <p style="color: white;">Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical,
+                     Pressure, Flow, Mass & all Process Control Instruments.
+                    It is an independent calibration Laboratory providing high quality reliable calibration services to industries.</p>
             </div>
 
             <div>
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Mechanical Calibration Services</a></li>
                     <li><a href="#">Service 2</a></li>
                     <li><a href="#">Service 3</a></li>
                     <li><a href="#">Service 4</a></li>
@@ -144,7 +170,7 @@
                     answersContainer.innerHTML = '<ul><li>Pressure Gauge<li>Vacuum Gauge<li>Pressure Transmitter & Transduce<li>Magnehelic Gauge<li>Manometer<li>Dead Weight Tester etc.</ul>';
                     break;
                 case 'q3':
-                    answersContainer.innerHTML = '<p>Answer 3 goes here...</p>';
+                    answersContainer.innerHTML = '<ul><li>Standard Weight<li>Precise and  Industrial Weighing Balances<li>Push Pull Gauge/Force Gauge<li>Load Cell etc.</ul>';
                     break;
                     case 'q4':
                     answersContainer.innerHTML = '<ul><li>Rubber Hardness Tester<li>Brinell and Rockwell Hardness Tester<li>Universal testing Machine (UTM)<li>Tensile Testing Machine<li>Load Cell, Torque wrench<li>Torque Indicator etc.</ul>';
