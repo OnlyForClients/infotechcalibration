@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Blog Title</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/electro-technical-calibration-service-500x500.webp') center/cover no-repeat fixed;
+            background-color: rgba(244, 244, 244, 0.8); /* Background color with opacity */
+        }
+
+        header {
+            background-color: #32b2e5;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color for the content area with opacity */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+        }
+
+        p {
+            color: black;
+        }
+
+        .half {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .half > div {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .back-to-home{
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+        }
+        .back-to-home:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><button class="back-to-home"style="position: fixed; top: 0; left: 0; margin: 5px;">&#8592; Back to Home</button></a>
+        <h2 style="color: white; margin: 0; font-style: italic; font-size:small; padding-top: 20px;">WE ARE LEADER IN CALLIBRATION & TESTING SERVICES<h2>
+        <h1 style="color: white; margin-top: 0; font-family:Verdana, Geneva, Tahoma, sans-serif; margin-bottom: 2px;">ELECTRO-TECHNICAL CALIBRATION</h1>
+        <p style="color: white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding-top: 0; margin-top: 0;">Info Tech Calibration Services is an accredited body as per ISO/IEC 17025:2017 by the National Accreditation Board <br>for Testing & Calibration Laboratories (NABL) for both testing and calibration.</p>
+    </header>
+
+    <section>
+        <div class="half">
+            <div>
+                <p style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Electrical measuring devices are used in a variety of industries, including the food, pharmaceutical, automotive, and manufacturing sectors. Thus, a key factor in guaranteeing the quality and safety of these sectors is the calibration of these electrical equipment. The smooth operation of these devices is ensured via calibration, which guarantees that the measurement values they provide are accurate. Additionally, calibration ensures that the measurements can be tracked back.
+
+                    In our climate-controlled laboratory, the temperature is kept at 25±2ºC and the humidity ranges from 45 to 75 percent. Modern test benches for the lab standards, as well as a fur mat, are part of our electro-technical calibration lab’s equipment. We have master equipment that can be calibrated and has a traceability to national and international standards.  
+                </p>
+                <img style="width: 150px;" src="images/Electro-technical-Calibration21.jpg">
+                <img style="width: 150px;" src="images/mcs_02.jpg">
+            </div>
+
+            <div>
+                <label for="questions">To ensure that the quality of our service is not compromised, the following instruments and standards have been obtained by our calibration facility from top suppliers.</label>
+                <select id="questions">
+                    <option value="q1">Current (Ampere)</option>
+                    <option value="q2">Voltage (Volt)</option>
+                    <option value="q3">Resistance (Ohm)</option>
+                    <option value="q4">Capacitance</option>
+                    <option value="q5">Inductance</option>
+                    <option value="q6">Frequency</option>
+                    <option value="q7">Time</option>
+                    <option value="q8">Temperature (Measure)</option>
+                    <option value="q9">Temperature (Source)</option>
+                    <option value="q10">Energy / Power / Power Factor</option>
+                    <option value="q11">High Voltage</option>
+                    <!-- Add more questions as needed -->
+                </select>
+
+                <div id="answers">
+                    <!-- Answers will be displayed here based on the selected question -->
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+    <div style="background-color: #32b2e5e3; color: #ffffff; text-align: center; padding: 40px 0;">
+        <p style="margin: 10px 0; font-size: 18px;">Info Tech Calibration Services</p>
+        <h1 style="margin: 0; font-size: 36px;">On Site Calibration & Environmental Testing's.</h1>
+        <div style="margin-top: 20px;">
+          <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #2ecc71; color: #ffffff; text-decoration: none; font-size: 16px; margin-right: 10px;">Know More</a>
+          <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: #ffffff; text-decoration: none; font-size: 16px;">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <p></p>
+      </div>
+      <footer id="footer">
+        <div class="footer-section">
+            <div>
+                <h3>About Us</h3>
+                <p>Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical, 
+                  Pressure, Flow, Mass & all Process Control Instruments.
+                  It is an independent calibration Laboratory providing high quality reliable calibration services to industries.</p>
+            </div>
+
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="m_c_s.html" style="color: white;">Mechanical Calibration Services</a></li>
+                    <li><a href="t_c_f.html" style="color: white;">Thermal Calibration Services</a></li>
+                    <li><a href="e_t_c.html" style="color: white;">Electro Technical Calibration</a></li>
+                    <li><a href="p_c_i_c.html" style="color: white;">Process Control Calibration Services</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+                <p>6QHW+X4F, Corporate Office,<br>Mao, Haryana, India<br>Email: contactcalibration@gmail.com<br>Phone: +123456789</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Add JavaScript logic to handle dropdown selection and display answers here
+        document.getElementById('questions').addEventListener('change', function () {
+            var selectedQuestion = this.value;
+            var answersContainer = document.getElementById('answers');
+            
+            // Clear previous answers
+            answersContainer.innerHTML = '';
+
+            // Add logic to display answers based on the selected question
+            switch (selectedQuestion) {
+                case 'q1':
+                    answersContainer.innerHTML = '<ul><li>AC/DC Ampere Meter (1mA to 1000 A)</li> <li>Digital Multimeter (up to 5 ½ Digital)<li> AC/DC Clamp Meter<li>AC/DC Regulated Power Supply<li>Multifunction Calibrator<li>Energy Meter<li>Power Factor Meter<li>Power Meter<li>Current/ Potential Transformer<li>Digital Panel Meter<li>Ampere-Hour Meter</ul>';
+                    break;
+                case 'q2':
+                    answersContainer.innerHTML = 'AC/DC Voltmeter (1 mV to 1000 V), Digital Multimeter (up to 5 ½ Digital), AC/DC Clamp Meter, AC/DC Regulated Power Supply, Multifunction Calibrator, Energy Meter, Power Factor Meter, Power Meter, Current/ Potential Transformer, Digital Panel Meter, LVDT Sensor, Spark Tester AC/DC (0 – 40 kV), High Voltage Tester AC/DC (0 – 40 kV)';
+                    break;
+                case 'q3':
+                    answersContainer.innerHTML = 'Micro/Milli/Ohm Meter/Resistance Meter, Digital Multimeter (up to 5 ½ Digital), AC/DC Clamp Meter, Multifunction Calibrator, LCR Meter, Earth Tester, Earth Pit, Meggar / Insulation Tester,, Million Megohm Meter, Double Kelvin-Bridge';
+                    break;
+                    case 'q4':
+                    answersContainer.innerHTML = 'Capacitance Meter, LCR Meter, Digital Multimeter (up to 5 ½ Digital)';
+                    break;
+                    case 'q5':
+                    answersContainer.innerHTML = 'Inductance Meter, LCR Meter, Impedance Meter';
+                    break;
+                    case 'q6':
+                    answersContainer.innerHTML = 'Frequency Meter, Digital Multimeter (up to 5 ½ Digital), Multifunction Calibrator, Digital Panel Meter';
+                    break;
+                    case 'q7':
+                    answersContainer.innerHTML = 'Digital Timer (1 s to 24 Hour), Stop Watch (1 s to 24 Hour)';
+                    break;
+                    case 'q8':
+                    answersContainer.innerHTML = '<B>Multifunction Calibrator</B>: (RTD (-200 to 600 °C), Thermocouple (J, K, R, S, T, N, E, B) (-200 to 1800 °C), <B>Universal Calibrator</B>: (RTD (-200 to 600 °C), Thermocouple (J, K, R, S, T, N, E, B) (-200 to 1800 °C)';
+                    break;
+                    case 'q9':
+                    answersContainer.innerHTML = '<B>Multifunction Calibrator:</B> (RTD (-200 to 600 °C), Thermocouple (J, K, R, S, T, N, E, B) (-200 to 1800 °C)(RTD (-200 to 600 °C), <B>Universal Calibrator: </B> RTD (-200 to 600 °C), Thermocouple (J, K, R, S, T, N, E, B) (-200 to 1800 °C), <B>Temperature Controller / Temperature Indicator: </B> (RTD (-200 to 600 °C), Thermocouple (J, K, R, S, T, N, E, B) (-200 to 1800 °C)';
+                    break;
+                    case 'q10':
+                    answersContainer.innerHTML = 'Energy/kWh Meter (Single Phase and Three Phase), Power/watt Meter (Single Phase and Three Phase), Power Factor/pF Meter (Single Phase and Three Phase)';
+                    break;
+                    case 'q11':
+                    answersContainer.innerHTML = 'Spark Tester AC/DC (0 – 40 kV), High Voltage Tester AC/DC (0 – 40 kV)';
+                    break;
+                // Add more cases for additional questions
+            }
+        });
+    </script>
+
+</body>
+</html>
