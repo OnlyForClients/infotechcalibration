@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+          body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    .column {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 30px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .right-column {
+      padding: 0 20px;
+    }
+
+    .read-more {
+      cursor: pointer;
+      color: white;
+      background-color: black;
+      width: auto;
+      padding: 10px;
+      border-radius: 5px;
+      background-size:auto;
+    }
+    .read-more:hover{
+      background-color: rgb(132, 132, 132);
+      color: black;
+    }
+
+    .hidden-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      margin-top: 20px;
+    }
+
+    .hidden-section.show {
+      max-height: 1000px; /* Adjust the max height based on your content */
+    }
+      .client-slide:hover {
+        transform: scale(1.5);
+      }
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .scroll-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .column {
+      text-align: center;
+      color: #333;
+    }
+
+    .count {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .count-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  @keyframes shuttle {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+
+    div {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+  /* #contactButton{ */
+    /* position: fixed; 
+    top: 0; 
+    left: 0;  */
+    /* margin: 10px; 
+    background-color: darkblue; 
+    color: white;
+  border: none; padding: 15px; font-weight: bold;
+  font-family: Tahoma, sans-serif;
+  border-radius: 20px; */
+  /* } */ */
+  /* #contactButton:hover{
+    color: white;
+    cursor: pointer; */
+
+    
+  /* } */
+  /* .contact-cutout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+} */
+/* 
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+} */
+
+/* Rest of the existing styles remain unchanged */
+
+
+
+    </style>
+  
+    </head>
+    <body>
+    
+<header>
+  <p class="contact-mail" style="padding: 0; margin: 2px;">contactcalibration@gmail.com</p>
+  <p class="mob" style="padding: 0; margin: 0;">+91 97281 92604</p>
+<!-- 
+  <div id="contactCutout" class="contact-cutout">
+    <button id="contactButton" style="margin: 0;">Contact Us</button>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" style="color: black; cursor: pointer;">&times;</span>
+            <h2 style="color: black;">Contact Us</h2>
+            <p  style="color: black;">Address: 177, Dharuhera Indl. Area, Malpura, Distt. Rewari, Haryana-123110.</p>
+            <p  style="color: black;">Phone: +919728192604</p>
+            <p  style="color: black;">Email: contactcalibration@gmail.com</p>
+        </div>
+    </div>
+</div> -->
+<!-- 
+    <img src="images/logo.png" alt="Logo" height="50" style="padding: 0; margin: 0;"> -->
+    <h1 class="title-edit" style="padding: 0; margin: 0;"><img src="images/logo.png" style="position: fixed; left: 0; top: 0; margin: 5px; position: fixed; height:80px; width: 85px; padding-right: 3px;">INFO TECH CALIBRATION SERVICES</h1>
+    <p class="tagline">Info Tech Calibration Services is a joint venture of Global Calibration & Test Lab.</p>
+</header>
+
+
+
+<nav>
+    <a href="index.html"><b>Home</b></a>
+
+    <div class="dropdown">
+        <a href="#"><b>Services &#8628;</b></a>
+        <div class="dropdown-content">
+            <a href="m_c_s.html">Mechanical Calibration Services</a>
+            <a href="t_c_f.html">Thermal Calibration Facility</a>
+            <a href="e_t_c.html">Electro Technical Calibration</a>
+            <a href="p_c_i_c.html">Process Control Calibration Services</a>
+        </div>
+    </div>
+
+    <a href="#cll"><b>Clients</b></a>
+    <a href="#about"><b>About</b></a>
+    <!-- <div id="contactCutout" class="contact-cutout"> -->
+    <a id="contactButton"><b>Contact</b></a>
+    <!-- <div id="contactModal" class="modal">
+      <div class="modal-content">
+          <span class="close" style="color: black; cursor: pointer;">&times;</span>
+          <h2 style="color: black;">Contact Us</h2>
+          <p  style="color: black;">Address: 177, Dharuhera Indl. Area, Malpura, Distt. Rewari, Haryana-123110.</p>
+          <p  style="color: black;">Phone: +919728192604</p>
+          <p  style="color: black;">Email: contactcalibration@gmail.com</p>
+      </div>
+  </div>
+</div> -->
+</nav>
+<h1 style="text-align: center;">Address</h1>
+<p style="text-align: center;">177, Dharuhera Indl. Area, Malpura, Distt. Rewari, Haryana-123110</p>
+<h1 style="text-align: center;">Phone No.</h1>
+<p style="text-align: center;">+91 97281 92604</p>
+<h1 style="text-align: center;">Email</h1>
+<p style="text-align: center;">infotechcalibrations@gmail.com</p>
+<footer id="footer">
+    <div class="footer-section">
+        <div>
+            <h3>About Us</h3>
+            <p>Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical, 
+              Pressure, Flow, Mass & all Process Control Instruments.
+              It is an independent calibration Laboratory providing high quality reliable calibration services to industries.</p>
+        </div>
+
+        <div>
+            <h3>Services</h3>
+            <ul>
+                <li><a href="m_c_s.html" style="color: white;">Mechanical Calibration Services</a></li>
+                <li><a href="t_c_f.html" style="color: white;">Thermal Calibration Services</a></li>
+                <li><a href="e_t_c.html" style="color: white;">Electro Technical Calibration</a></li>
+                <li><a href="p_c_i_c.html" style="color: white;">Process Control Calibration Services</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>177, Dharuhera Indl. Area, Malpura, <br>Distt. Rewari, Haryana-123110<br>Email: infotechcalibrations@gmail.com<br>Phone: +91 97281 92604</p>
+        </div>
+    </div>
+</footer>
