@@ -36,8 +36,16 @@
 
     .read-more {
       cursor: pointer;
-      color: blue;
-      text-decoration: underline;
+      color: white;
+      background-color: black;
+      width: auto;
+      padding: 10px;
+      border-radius: 5px;
+      background-size:auto;
+    }
+    .read-more:hover{
+      background-color: rgb(132, 132, 132);
+      color: black;
     }
 
     .hidden-section {
@@ -84,7 +92,70 @@
       height: auto;
       border-radius: 10px;
     }
+  @keyframes shuttle {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+
+    div {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+  #contactButton{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    margin: 10px; 
+    background-color: darkblue; 
+    color: white;
+  border: none; padding: 15px; font-weight: bold;
+  font-family: Tahoma, sans-serif;
+  border-radius: 20px;
+  }
+  #contactButton:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+
     
+  }
+  .contact-cutout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+#contactModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+}
+
+/* Rest of the existing styles remain unchanged */
+
+
+
     </style>
   
     </head>
@@ -93,10 +164,27 @@
 <header>
   <p class="contact-mail">contactcalibration@gmail.com</p>
   <p class="mob">+91 ZZZZZ ZZZZZ</p>
+
+  <div id="contactCutout" class="contact-cutout">
+    <button id="contactButton">Contact Us</button>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" style="color: black; cursor: pointer;">&times;</span>
+            <h2 style="color: black;">Contact Us</h2>
+            <p  style="color: black;">Address: 6QHW+X4F, Corporate Office, Mao, Haryana, India</p>
+            <p  style="color: black;">Phone: Your Phone Number</p>
+            <p  style="color: black;">Email: contactcalibration@gmail.com</p>
+        </div>
+    </div>
+</div>
+
     <img src="images/logo.png" alt="Logo" height="50">
     <h1 class="title-edit">INFO TECH CALIBRATION SERVICES</h1>
     <p class="tagline">A Perfect Engineering Solution</p>
 </header>
+
+
 
 <nav>
     <a href="#"><b>Home</b></a>
@@ -105,15 +193,14 @@
         <a href="#"><b>Services &#8628;</b></a>
         <div class="dropdown-content">
             <a href="m_c_s.html">Mechanical Calibration Services</a>
-            <a href="#">Thermal Calibration Facility</a>
-            <a href="#">Electro Technical Calibration</a>
-            <a href="#">Process Control Calibration Services</a>
+            <a href="t_c_f.html">Thermal Calibration Facility</a>
+            <a href="e_t_c.html">Electro Technical Calibration</a>
+            <a href="p_c_i_c.html">Process Control Calibration Services</a>
         </div>
     </div>
 
-    <a href="#"><b>Clients</b></a>
-    <a href="#"><b>About</b></a>
-    <a href=""><b>Contact</b></a>
+    <a href="#cll"><b>Clients</b></a>
+    <a href="#about"><b>About</b></a>
 </nav>
 
 <!-- Rest of your HTML content goes here -->
@@ -155,41 +242,45 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
           </div>
-
+<hr width="720px">
+<h3 style="color: orangered; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Info Tech Calibration Services</h3>
+<h1 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">ALWAYS SERVING YOU WITH THE BEST RESULTS</h1>
+<p style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical,<br> Mechanical, Pressure, Flow, Mass & all Process Control Instruments.</p>
           <div class="scroll-section" style="max-height: 200px; margin-top: 20px;">
             <div class="column">
               <img src="images/customers.png" alt="Customers" class="count-image" style="height: 80px; width: 80px;">
               <div class="count" id="customersCount">0</div>
-              <p>Customers</p>
+              <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Valuable Customers</p>
             </div>
         
             <div class="column">
               <img src="images/staff.png" alt="Staff" class="count-image" style="height: 80px; width: 80px;">
               <div class="count" id="staffCount">0</div>
-              <p>Experienced Staff</p>
+              <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Experienced Staff</p>
             </div>
         
             <div class="column">
               <img src="images/experience.png" alt="Experience" class="count-image" style="height: 80px; width: auto">
               <div class="count" id="experienceCount">0</div>
-              <p>Years of Experience</p>
+              <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Years of Experience</p>
             </div>
         
             <div class="column">
               <img src="images/industry.png" alt="Industries" class="count-image" style="height: 80px; width: 80px;">
               <div class="count" id="industriesCount">0</div>
-              <p>Big Industries</p>
+              <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Big Industries</p>
             </div>
           </div>
-          <div class="main-section" style="margin-top: 20px;">
+          <hr width="720px">
+          <div class="main-section" id="about" style="margin-top: 20px;">
             <div class="column">
               <img src="images/home-about3.png" alt="Image" class="image">
             </div>
         
             <div class="column right-column">
-              <h2>HIGHLY RECOGNIZED<br> by NABL ACCREDITED LABORATORY</h2>
+              <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: black;">HIGHLY RECOGNIZED<br> by NABL ACCREDITED LABORATORY</h2>
               <p>
-                <p>Info Tech Calibration began with maintenance, calibration of energy metres,
+                <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Info Tech Calibration began with maintenance, calibration of energy metres,
                   relays, circuit breakers, panel wiring, yearly maintenance contracts, energy
                   audits, and marketing of process control instruments. Global Calibration has gained
                    experience and knowledge in the fields of electrotechnical, thermal, and mechanical 
@@ -197,12 +288,12 @@
               <p class="read-more" onclick="toggleSection()">Read More</p>
         
               <div class="hidden-section" id="hiddenSection">
-                <h3>
+                <h3 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
                   According to the kind and capacity of the equipment, every testing equipment
                    is calibrated using various force measuring tools, specialised gauges, and 
                    various test blocks, etc. According to the necessary standards advised by NABL, 
                    any instrument that has been calibrated may be traced.</h3>
-                <p>
+                <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
                   Ourselves as a leading Calibration Lab for Calibration of Instruments like Thermal, Electrical, Mechanical, Pressure, Flow, Mass & all Process Control Instruments.<br>
         
         It is an independent calibration Laboratory providing high quality reliable calibration services to industries.<br>
@@ -212,9 +303,75 @@
               </div>
             </div>
           </div>
-          <div style="text-align: center;">
-            <h1 style="margin-bottom: 10px;">Our Clients</h1>
-            <h2 style="margin-bottom: 20px;">Clients we've worked with</h2>
+          <hr width="720px">
+          <body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
+            <h1 style=" font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; margin-bottom: 20px; margin-top: 20px; padding-bottom: 10px; margin-bottom: 0;">Best Calibration Services</h1>
+            <div style="display: flex; max-width: 80%; margin: 50px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  padding-top: 10px; margin-top: 0; border-radius: 15px;">
+              <!-- Left Column -->
+              <div style="flex: 1; margin-right: 20px;">
+                <div onclick="toggleAnswer('answer1')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  QUALITY MAINTAIN
+                </div>
+                <div id="answer1" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  In order to satisfy all of our customers, we have been providing services to quality-conscious clients by assisting them in accomplishing their quality goals by maintaining their machines to the necessary standard and calibrating them in accordance with national and international standards.
+                </div>
+            
+                <div onclick="toggleAnswer('answer2')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  OUR TEAM
+                </div>
+                <div id="answer2" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  Our skilled and dynamic team of specialists, who follow a methodical work process, enables us to successfully carry out client orders and deliver them within the allotted time limit. Our ability to comprehend the precise needs of our client has been made possible by their extensive experience and thorough knowledge
+                </div>
+                <div onclick="toggleAnswer('answer3')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  CALIBRATION SERVICES
+                </div>
+                <div id="answer3" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  <UL>
+                      <li>Electrical Instruments</li>
+                      <li>Thermal Instruments</li>
+                      <li>Mechanical Instruments</li>
+                      <li>Laboratory Equipments</li>
+                      <li>Process Equipments</li>
+                  </UL>
+                </div>
+              </div>
+            
+              <!-- Right Column -->
+              <div style="flex: 1;">
+                <div onclick="toggleAnswer('answer4')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  WHY US?
+                </div>
+                <div id="answer4" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  Maximum years of expertise in all sectors, including mechanical, electro-technical, and thermal calibration and adjustment, are available at the lab.
+All customers receive “Pre” and “Post” written reports in the form of a “History Card” for altered instruments and equipment.
+Customers receive free technical assistance and training.
+                </div>
+            
+                <div onclick="toggleAnswer('answer5')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  OUR TRUSTWORTHY AND EFFECTIVE SETUP PROVIDES
+                </div>
+                <div id="answer5" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  Team for calibration and servicing that has received professional training
+Excellent infrastructure and calibration tools to guarantee the best outcomes.
+For all machines made in India, all genuine spare parts are readily available.
+                </div>
+                
+                <div onclick="toggleAnswer('answer6')" style="cursor: pointer; margin-bottom: 10px; padding: 10px; background-color: #e0e0e0; border-radius: 5px;">
+                  WE RECEIVE A LOT OF PRAISE FOR THE FOLLOWING REASON:
+                </div>
+                <div id="answer6" style="display: none; padding: 10px; border-top: 1px solid #ccc; margin-top: 10px; animation: shuttle 0.5s ease-in-out;">
+                  <li>Professional approach</li>
+                  <li>Effective from a financial point of view</li>
+                  <li>Reliable</li>
+                  <li>Prompt execution</li>
+                  <li>Quick and committed services</li>
+                </div>
+              </div>
+            </div>
+            <hr width="720px">
+          <div id="cll" style="text-align: center; margin-top: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(233, 230, 230);">
+            <h1 style="margin-bottom: 10px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">OUR VALUABLE CLIENTS</h1>
+            <h2 style="margin-bottom: 20px; color: #333;"><small>CUSTOMERS ARE THE BUSINESS' LIFE-SOURCE AND THE DRIVE BEHIND OUR INNOVATIONS.</small> </h2>
         
             <div id="client-slideshow" style="padding-left: 10px; padding-right: 10px; max-width: auto; text-align: center; margin: 0 auto; overflow: hidden;">
               <div id="client-slides" style="display: flex; transition: transform 0.5s ease-in-out;">
@@ -265,8 +422,16 @@
               </div>
             </div>
           </div>
-        
-          <footer>
+          <div style="background-color: #48a5cae3; color: #ffffff; text-align: center; padding: 40px 0; margin-top: 20px; margin-bottom: 20px;">
+            <p style="margin: 10px 0; font-size: 18px;">Info Tech Calibration Services</p>
+            <h1 style="margin: 0; font-size: 36px; font-family: 'Times New Roman', Times, serif;">On Site Calibration & Environmental Testing's.</h1>
+            <div style="margin-top: 20px;">
+              <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #2ecc71; color: #ffffff; text-decoration: none; font-size: 16px; margin-right: 10px;">Know More</a>
+              <a href="#" style="display: inline-block; padding: 10px 20px; background-color: #e74c3c; color: #ffffff; text-decoration: none; font-size: 16px;">Contact Us</a>
+            </div>
+          </div>
+          <div>
+          <footer id="footer">
             <div class="footer-section">
                 <div>
                     <h3>About Us</h3>
@@ -278,16 +443,16 @@
                 <div>
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Mechanical Calibration Services</a></li>
-                        <li><a href="#">Service 2</a></li>
-                        <li><a href="#">Service 3</a></li>
-                        <li><a href="#">Service 4</a></li>
+                        <li><a href="m_c_s.html" style="color: white;">Mechanical Calibration Services</a></li>
+                        <li><a href="t_c_f.html" style="color: white;">Thermal Calibration Services</a></li>
+                        <li><a href="e_t_c.html" style="color: white;">Electro Technical Calibration</a></li>
+                        <li><a href="p_c_i_c.html" style="color: white;">Process Control Calibration Services</a></li>
                     </ul>
                 </div>
     
                 <div>
                     <h3>Contact</h3>
-                    <p>123 Main Street<br>City, Country<br>Email: example@example.com<br>Phone: +123456789</p>
+                    <p>6QHW+X4F, Corporate Office,<br>Mao, Haryana, India<br>Email: contactcalibration@gmail.com<br>Phone: +123456789</p>
                 </div>
             </div>
         </footer>
@@ -401,7 +566,33 @@
                     image.style.transform = (hiddenSection.classList.contains('show')) ? 'scaleY(0)' : 'scaleY(1)';
                   }
                 </script>
-              
+                
+<script>
+  function toggleAnswer(answerId) {
+    var answer = document.getElementById(answerId);
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+    } else {
+      answer.style.display = "none";
+    }
+  }
+</script>
+<script>
+  document.getElementById('contactButton').addEventListener('click', function() {
+    document.getElementById('contactModal').style.display = 'block';
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('contactModal').style.display = 'none';
+});
+
+// Close the modal if the user clicks outside the modal
+window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('contactModal')) {
+        document.getElementById('contactModal').style.display = 'none';
+    }
+});
+</script>      
             
     </body>
     </html>
